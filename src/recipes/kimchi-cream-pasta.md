@@ -6,12 +6,12 @@ categories:
     - Korean
     - Noodles
 featured_image: https://roadtoyummy.com/wp-content/uploads/2021/01/RXY07979-1-1-768x1000.jpg
-short_description: "This is my first recipe"
+short_description: "A creamy, savory, and spicy noodle dish you'll love! Super easy and quick dinner."
 tags: ["kimchi", "cream", "pasta", "noodles", "korean"]
 recipe:
     servings: 3
-    prep: 10
-    cook: 10
+    prep_time_minutes: 10
+    cook_time_minutes: 10
     ingredients_markdown: |-
         * Half box of spaghetti (or noodle of your choice)
         * 1 cup of kimchi
@@ -38,7 +38,5 @@ recipe:
         11. Add your pasta and mix to make sure your pasta is evenly coated. Add cheese, salt, and black pepper to taste.
         12. Garnish with scallion, red pepper flakes, black pepper, and more cheese. Now it’s time to serve and eat!
 ---
-
-## Kimchi Cream Pasta
 
 This dish is one of our favorites whenever we go out to eat in Koreatown. Luckily, it’s so quick and easy to recreate at home! This dish is savory, creamy, and has just the perfect amount of spice. The best part about this dish is that it requires few ingredients and is so customizable- you can use whatever meat or noodle you have on hand!
