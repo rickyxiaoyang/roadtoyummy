@@ -55,6 +55,7 @@ const RecipeItem = ({ recipe }: { recipe: Recipe }) => {
                     background: `url(${recipe.featured_image})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
+                    backgroundPosition: "center",
                 }}
             ></div>
             <div className={recipeItemTextContainer}>

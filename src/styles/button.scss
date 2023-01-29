@@ -5,6 +5,7 @@ button {
 .btn {
     border: none;
     background-color: unset;
+    transition: 0.2s ease-in-out;
 
     &.pill {
         border-radius: 40px;
