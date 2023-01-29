@@ -39,7 +39,13 @@ export const RecipeList = () => {
             {nodes.map((recipe) => (
                 <>
                     <RecipeItem recipe={recipe.frontmatter} />
-                    <hr style={{ maxWidth: "700px", width: "90%" }} />
+                    <hr
+                        style={{
+                            maxWidth: "700px",
+                            width: "90%",
+                            opacity: "0.2",
+                        }}
+                    />
                 </>
             ))}
         </div>
@@ -63,7 +69,7 @@ const RecipeItem = ({ recipe }: { recipe: Recipe }) => {
                 <span>{recipe.short_description}</span>
                 <br />
                 <button
-                    className="btn pill"
+                    className="btn filled"
                     onClick={() => navigate(`recipes/${recipe.slug}`)}
                 >
                     Learn more...

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/shared/Layout/Layout";
+import "../../styles/styles.scss";
 
 export default function RecipeTemplate({ data }: { data: any }) {
     const { markdownRemark } = data;
@@ -11,9 +12,14 @@ export default function RecipeTemplate({ data }: { data: any }) {
             <RecipeLayout>
                 <div>
                     <h1>{frontmatter.title}</h1>
-                    <h2>{frontmatter.date}</h2>
+                    <p>{frontmatter.date}</p>
                     <img src={frontmatter.featured_image} />
-                    <h2>{frontmatter.categories.join(", ")}</h2>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: html,
+                        }}
+                    />
+                    {/* <h2>{frontmatter.categories.join(", ")}</h2> */}
                     <h3>Ingredients</h3>
                     <div
                         className="ingredients"
@@ -26,11 +32,6 @@ export default function RecipeTemplate({ data }: { data: any }) {
                         className="directions"
                         dangerouslySetInnerHTML={{
                             __html: recipe.directions_markdown.html,
-                        }}
-                    />
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: html,
                         }}
                     />
                 </div>
