@@ -6,7 +6,7 @@ import "./recipes.scss";
 import {
     Ingredient,
     IngredientItem,
-} from "../../components/recipes/Ingredient";
+} from "../../components/recipes/Ingredient/Ingredient";
 
 export default function RecipeTemplate({ data }: { data: any }) {
     const { markdownRemark } = data;
@@ -22,7 +22,10 @@ export default function RecipeTemplate({ data }: { data: any }) {
                 <div>
                     <h1>{frontmatter.title}</h1>
                     <p>{frontmatter.date}</p>
-                    <img src={frontmatter.featured_image} />
+                    <img
+                        className="recipe-featured-image"
+                        src={frontmatter.featured_image}
+                    />
 
                     <div>
                         <h3>Ingredients</h3>
@@ -36,13 +39,13 @@ export default function RecipeTemplate({ data }: { data: any }) {
                         }}
                     /> */}
                     {/* <h2>{frontmatter.categories.join(", ")}</h2> */}
-                    <h3>Ingredients</h3>
+                    {/* <h3>Ingredients</h3>
                     <div
                         className="ingredients"
                         dangerouslySetInnerHTML={{
                             __html: recipe.ingredients_markdown.html,
                         }}
-                    />
+                    /> */}
                     <h3>Directions</h3>
                     <div
                         className="directions"
@@ -57,7 +60,7 @@ export default function RecipeTemplate({ data }: { data: any }) {
 }
 
 function RecipeLayout({ children }: { children: JSX.Element }) {
-    return <div>{children}</div>;
+    return <div className="recipe-container">{children}</div>;
 }
 
 export const pageQuery = graphql`

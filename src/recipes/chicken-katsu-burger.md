@@ -33,7 +33,7 @@ recipe:
           amount: .5
           unit: cup
         - name: mayonnaise
-          amount: 25
+          amount: 2
           unit: tablespoons
         - name: greek yogurt
           amount: 1
@@ -77,6 +77,26 @@ recipe:
         * 1 teaspoon salt
         * 1 teaspoon black pepper
 
+    directions: 
+        - sections: 
+            - name: "Making coleslaw"
+              steps:
+                - text: "Mix together your cabbage, carrots, greek yogurt, and mustard. Add 1 tbsp of mayo, leaving a remaining 1 tbsp for the sriracha-mayo sauce."
+            - name: "Making the spicy mayo"
+              steps:
+                - text: "Spicy mayo is super simple. Mix the mayonnaise with sriracha. Add more or less sriracha depending on your spicy preference."
+            - name: "Frying the katsu"
+              steps:
+                - text: "Heat oil to 375F"
+                - text: "Drop in your breaded chicken lightly to avoid splashing. Fry until it's golden brown but not burnt. This should be around 7-10 minutes, but heavily depends on your chicken's thickness."
+                - text: "Remove the chicken from the oil, and let it rest for 5 minutes on a paper towel. This will help remove the excess oil."
+            - name: "Compile your burger"
+                - text: Spread spicy mayo to cover the bottom bun.
+                - text: Add coleslaw.
+                - text: Add the fried chicken katsu.
+                - text: "Optional: add more spicy mayo on top of the katsu."
+                - text: Add the top bun, and you're done!
+                
     directions_markdown: |-
         Tip: Thin-sliced chicken will work better and cook more easily. Use a meat-pounder to tenderize or flatten it if the slices are too thick.
 

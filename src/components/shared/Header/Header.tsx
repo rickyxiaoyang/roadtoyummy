@@ -8,8 +8,10 @@ export default function Header() {
     };
 
     return (
-        <div className={styles.header} onClick={onClick}>
-            <div className={styles.mainText}>Road to Yummy</div>
+        <div className={styles.header}>
+            <div className={styles.mainText} onClick={onClick}>
+                Road to Yummy
+            </div>
             <div className={styles.subText}>from hungry to happy</div>
         </div>
     );
