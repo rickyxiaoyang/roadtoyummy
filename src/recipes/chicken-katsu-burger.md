@@ -13,6 +13,14 @@ recipe:
     servings: 3
     prep_time_minutes: 10
     cook_time_minutes: 10
+    ingredients:
+        - name: chicken breast
+          amount: 1
+          unit: piece
+          note: sliced into thin patties preferably
+        - name: burger buns
+          amount: 2
+          unit: buns
     ingredients_markdown: |-
         #### Burger:
         * 1 chicken breast, sliced into thin patties preferably

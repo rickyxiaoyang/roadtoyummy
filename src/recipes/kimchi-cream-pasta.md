@@ -12,11 +12,39 @@ recipe:
     servings: 3
     prep_time_minutes: 10
     cook_time_minutes: 10
+    ingredients:
+        - name: spaghetti
+          amount: 0.5
+          unit: box
+        - name: kimchi
+          amount: 1
+          unit: cup
+        - name: bacon
+          amount: 3
+          unit: slices
+          note: or turkey bacon
+        - name: spaghetti
+          amount: 0.5
+          unit: box
+        - name: garlic
+          amount: 5
+          unit: cloves
+        - name: scallion
+          amount: 1
+          unit: stick
+        - name: heavy cream
+          amount: 0.75
+          unit: cup
+        - name: black pepper (to taste)
+        - name: salt (to taste)
+        - name: red pepper flakes (to taste)
+        - name: parmesan cheese (to taste)
+
     ingredients_markdown: |-
         * Half box of spaghetti (or noodle of your choice)
         * 1 cup of kimchi
         * 3 slices of bacon (or turkey bacon)
-        * 5 cloves garlice
+        * 5 cloves garlic
         * 1 stick scallion
         * 3/4 cup of heavy cream
         * black pepper (to taste)

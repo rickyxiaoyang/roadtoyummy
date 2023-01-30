@@ -2,11 +2,20 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/shared/Layout/Layout";
 import "../../styles/styles.scss";
+import "./recipes.scss";
+import {
+    Ingredient,
+    IngredientItem,
+} from "../../components/recipes/Ingredient";
 
 export default function RecipeTemplate({ data }: { data: any }) {
     const { markdownRemark } = data;
     const { frontmatter, html } = markdownRemark;
     const { recipe } = frontmatter;
+
+    React.useEffect(() => {
+        console.log(recipe.ingredients);
+    }, []);
     return (
         <Layout>
             <RecipeLayout>
@@ -14,11 +23,18 @@ export default function RecipeTemplate({ data }: { data: any }) {
                     <h1>{frontmatter.title}</h1>
                     <p>{frontmatter.date}</p>
                     <img src={frontmatter.featured_image} />
-                    <div
+
+                    <div>
+                        <h3>Ingredients</h3>
+                        {recipe.ingredients.map((ingredient: Ingredient) => (
+                            <IngredientItem ingredient={ingredient} />
+                        ))}
+                    </div>
+                    {/* <div
                         dangerouslySetInnerHTML={{
                             __html: html,
                         }}
-                    />
+                    /> */}
                     {/* <h2>{frontmatter.categories.join(", ")}</h2> */}
                     <h3>Ingredients</h3>
                     <div
@@ -55,6 +71,11 @@ export const pageQuery = graphql`
                 categories
                 featured_image
                 recipe {
+                    ingredients {
+                        name
+                        amount
+                        unit
+                    }
                     ingredients_markdown {
                         html
                     }
