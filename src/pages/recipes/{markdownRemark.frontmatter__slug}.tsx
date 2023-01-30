@@ -7,6 +7,7 @@ import {
     Ingredient,
     IngredientItem,
 } from "../../components/recipes/Ingredient/Ingredient";
+import { DirectionSection } from "../../components/recipes/Direction/Direction";
 
 export default function RecipeTemplate({ data }: { data: any }) {
     const { markdownRemark } = data;
@@ -14,8 +15,9 @@ export default function RecipeTemplate({ data }: { data: any }) {
     const { recipe } = frontmatter;
 
     React.useEffect(() => {
-        console.log(recipe.ingredients);
+        console.log(recipe.direction_sections);
     }, []);
+
     return (
         <Layout>
             <RecipeLayout>
@@ -46,13 +48,21 @@ export default function RecipeTemplate({ data }: { data: any }) {
                             __html: recipe.ingredients_markdown.html,
                         }}
                     /> */}
-                    <h3>Directions</h3>
-                    <div
+
+                    <div>
+                        <h3>Directions</h3>
+                        {recipe.direction_sections.map(
+                            (section: DirectionSection) => (
+                                <DirectionSection section={section} />
+                            )
+                        )}
+                    </div>
+                    {/* <div
                         className="directions"
                         dangerouslySetInnerHTML={{
                             __html: recipe.directions_markdown.html,
                         }}
-                    />
+                    /> */}
                 </div>
             </RecipeLayout>
         </Layout>
@@ -79,11 +89,12 @@ export const pageQuery = graphql`
                         amount
                         unit
                     }
-                    ingredients_markdown {
-                        html
-                    }
-                    directions_markdown {
-                        html
+                    direction_sections {
+                        name
+                        steps {
+                            text
+                            image
+                        }
                     }
                 }
             }
