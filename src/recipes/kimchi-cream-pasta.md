@@ -23,9 +23,6 @@ recipe:
           amount: 3
           unit: slices
           note: or turkey bacon
-        - name: spaghetti
-          amount: 0.5
-          unit: box
         - name: garlic
           amount: 5
           unit: cloves

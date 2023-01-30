@@ -37,7 +37,7 @@ export const RecipeList = () => {
     return (
         <div className={recipeList}>
             {nodes.map((recipe) => (
-                <>
+                <div key={recipe.slug}>
                     <RecipeItem recipe={recipe.frontmatter} />
                     <hr
                         style={{
@@ -46,7 +46,7 @@ export const RecipeList = () => {
                             opacity: "0.2",
                         }}
                     />
-                </>
+                </div>
             ))}
         </div>
     );

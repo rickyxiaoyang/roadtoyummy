@@ -13,7 +13,7 @@ export default function RecipeTemplate({ data }: { data: any }) {
     const { markdownRemark } = data;
     const { frontmatter } = markdownRemark;
     const { recipe } = frontmatter;
-
+    const { direction_sections } = recipe;
     React.useEffect(() => {
         console.log(recipe.direction_sections);
     }, []);
@@ -32,7 +32,10 @@ export default function RecipeTemplate({ data }: { data: any }) {
                     <div>
                         <h3>Ingredients</h3>
                         {recipe.ingredients.map((ingredient: Ingredient) => (
-                            <IngredientItem ingredient={ingredient} />
+                            <IngredientItem
+                                key={ingredient.name}
+                                ingredient={ingredient}
+                            />
                         ))}
                     </div>
                     {/* <div
@@ -51,11 +54,15 @@ export default function RecipeTemplate({ data }: { data: any }) {
 
                     <div>
                         <h3>Directions</h3>
-                        {recipe.direction_sections.map(
-                            (section: DirectionSection) => (
-                                <DirectionSection section={section} />
-                            )
-                        )}
+                        {direction_sections.map((section: DirectionSection) => (
+                            <DirectionSection
+                                key={section.name}
+                                section={section}
+                                hideSectionTitle={
+                                    direction_sections.length == 1
+                                }
+                            />
+                        ))}
                     </div>
                     {/* <div
                         className="directions"
