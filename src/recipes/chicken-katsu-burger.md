@@ -21,6 +21,41 @@ recipe:
         - name: burger buns
           amount: 2
           unit: buns
+        - name: panko bread crumbs
+          amount: 1
+          unit: cup
+        - name: eggs
+          amount: 2
+        - name: corn starch
+          amount: .25
+          unit: cup
+        - name: sliced cabbage
+          amount: .5
+          unit: cup
+        - name: mayonnaise
+          amount: 25
+          unit: tablespoons
+        - name: greek yogurt
+          amount: 1
+          unit: tablespoon
+        - name: mustard
+          amount: 1
+          unit: tablespoon
+        - name: sriracha
+          amount: 1
+          unit: tablespoon
+        - name: paprika
+          amount: 1
+          unit: teaspoon
+        - name: garlic powder
+          amount: 1
+          unit: teaspoon
+        - name: salt
+          amount: 0.5
+          unit: teaspoon
+        - name: pepper
+          amount: 0.5
+          unit: teaspoon
     ingredients_markdown: |-
         #### Burger:
         * 1 chicken breast, sliced into thin patties preferably

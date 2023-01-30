@@ -10,7 +10,7 @@ import {
 
 export default function RecipeTemplate({ data }: { data: any }) {
     const { markdownRemark } = data;
-    const { frontmatter, html } = markdownRemark;
+    const { frontmatter } = markdownRemark;
     const { recipe } = frontmatter;
 
     React.useEffect(() => {
