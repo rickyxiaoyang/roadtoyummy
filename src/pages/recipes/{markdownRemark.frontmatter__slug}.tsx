@@ -14,9 +14,6 @@ export default function RecipeTemplate({ data }: { data: any }) {
   const { frontmatter } = markdownRemark;
   const { recipe } = frontmatter;
   const { direction_sections } = recipe;
-  React.useEffect(() => {
-    console.log(recipe.direction_sections);
-  }, []);
 
   return (
     <Layout>
