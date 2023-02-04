@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 import { graphql, navigate, useStaticQuery } from "gatsby";
 import {
 	recipeList,
@@ -22,6 +22,7 @@ const pageQuery = graphql`
 				frontmatter {
 					slug
 					title
+					isoDate: date(formatString: "YYYY-MM-DD")
 					date(formatString: "MMMM, DD, YYYY")
 					short_description
 					featured_image
@@ -34,9 +35,16 @@ const pageQuery = graphql`
 export const RecipeList = () => {
 	const data = useStaticQuery(pageQuery);
 	const { nodes }: { nodes: any[] } = data?.allMarkdownRemark ?? [];
+
+	const byDateDescending = (a: any, b: any) => {
+		return (
+			new Date(b.frontmatter.isoDate).getTime() -
+			new Date(a.frontmatter.isoDate).getTime()
+		);
+	};
 	return (
 		<div className={recipeList}>
-			{nodes.map((recipe) => (
+			{nodes.sort(byDateDescending).map((recipe) => (
 				<div key={recipe.slug}>
 					<RecipeItem recipe={recipe.frontmatter} />
 					<hr
