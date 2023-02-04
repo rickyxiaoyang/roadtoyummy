@@ -17,7 +17,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     `gatsby-transformer-remark`,
-    // `gatsby-transformer-remark-frontmatter`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

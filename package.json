@@ -4,16 +4,14 @@
     "private": true,
     "description": "road-to-yummy",
     "author": "Ricky",
-    "keywords": [
-        "gatsby"
-    ],
     "scripts": {
         "develop": "gatsby develop",
         "start": "gatsby develop",
         "build": "gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "wipe": "rm -rf node_modules && npm i && gatsby develop"
     },
     "dependencies": {
         "@mdx-js/react": "^2.2.1",
