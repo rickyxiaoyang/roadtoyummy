@@ -73,7 +73,8 @@ recipe:
     - name: "Clean your beef"
       steps:
         - text: "Now, you need to clean your beef. This step cannot be skipped, or else your broth will be full of scum! Yuck! Boil enough water for your beef to submerge and bring to a boil."
-        - text: "Submerge your beef for 5-7 minutes and let the scum cook out. It will float to the top of your pot. Then, you have two options: Use a spoon or a small strainer to slowly remove the scum from the broth. Then spoon out the pieces of meat into another bowl. Strain the soup and the meat (and scum) into another bowl. The (now clearer) soup will be separated from the meat (and scum)."
+        - text: "Submerge your beef for 5-7 minutes and let the scum cook out. It will float to the top of your pot. Then, you have two options: 
+          \n\n- Use a spoon or a small strainer to slowly remove the scum from the broth. Then spoon out the pieces of meat into another bowl.\n\n- Strain the soup and the meat (and scum) into another bowl. The (now clearer) soup will be separated from the meat (and scum)."
         - text: "Wash your beef with cold water. Make sure it’s clean and semi-dry for this next step."
     - name: "In the instant pot"
       steps:
