@@ -53,25 +53,29 @@ export const RecipeList = () => {
 };
 
 const RecipeItem = ({ recipe }: { recipe: Recipe }) => {
+	const navigateToRecipe = () => {
+		navigate(`recipes/${recipe.slug}`);
+	};
 	return (
 		<div className={recipeItem}>
 			<div
 				className={recipeItemImageContainer}
+				onClick={navigateToRecipe}
 				style={{
 					background: `url(${recipe.featured_image})`,
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "cover",
 					backgroundPosition: "center",
+					cursor: "pointer",
 				}}
 			></div>
 			<div className={recipeItemTextContainer}>
-				<h2>{recipe.title.toUpperCase()}</h2>
+				<h2 onClick={navigateToRecipe} style={{ cursor: "pointer" }}>
+					{recipe.title.toUpperCase()}
+				</h2>
 				<span>{recipe.short_description}</span>
 				<br />
-				<button
-					className="btn filled"
-					onClick={() => navigate(`recipes/${recipe.slug}`)}
-				>
+				<button className="btn filled" onClick={navigateToRecipe}>
 					Learn more...
 				</button>
 			</div>
