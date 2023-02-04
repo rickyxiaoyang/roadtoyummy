@@ -40,7 +40,6 @@ recipe:
     - name: "Making your pasta"
       steps:
         - text: Cook your pasta in salted water until it is cooked through.
-          image: "https://roadtoyummy.com/wp-content/uploads/2021/01/RXY07979-1-1-768x1000.jpg"
         - text: Cut kimchi into smaller pieces. We used store-bought kimchi but if you have homemade kimchi, even better! We used about 1 cup of kimchi but use as much as you like.
         - text: Chop bacon into smaller bite-sized pieces.
         - text: Mince garlic.
