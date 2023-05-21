@@ -11,7 +11,7 @@ import { DirectionSection } from "../../components/recipes/Direction/Direction";
 
 export default function RecipeTemplate({ data }: { data: any }) {
 	const { markdownRemark } = data;
-	const { frontmatter } = markdownRemark;
+	const { frontmatter, html } = markdownRemark;
 	const { recipe } = frontmatter;
 	const { direction_sections } = recipe;
 
@@ -62,6 +62,10 @@ export default function RecipeTemplate({ data }: { data: any }) {
 					<img
 						className="recipe-featured-image"
 						src={frontmatter.featured_image}
+					/>
+					<div
+						className="markdown"
+						dangerouslySetInnerHTML={{ __html: html }}
 					/>
 					{ingredients}
 					{directions}
